@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="center-block">
+<h1>柱状图</h1>
+<h3>1、世界各国的出生率大致呈现下降的趋势</h3>
+<h3>2、世界各国的初等教育完成率正逐年提高</h3>
+<h3>3、世界各国的人均GDP也正逐年升高</h3>
+<h3>总结：结合上面的HIV新增感染人数折线图可大概得出：HIV新增感染人数的减少与经济发展、教育的普及和出生率有着密切的关联</h3>
+</div>
+<div class="center-block">
+  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+  <div id="main" style="width: 600px;height:400px;"></div>
+  <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption({{ bar_data | safe }});
+  </script>
+
+  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+  <div id="main2" style="width: 600px;height:400px;"></div>
+  <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart2 = echarts.init(document.getElementById('main2'));
+
+    // 指定图表的配置项和数据
+    var option2 = {{ bar_data2 | safe }};
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart2.setOption(option2);
+  </script>
+</div>
+
+{% endblock %}

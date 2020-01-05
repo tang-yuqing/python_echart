@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/world.js"></script>
+
+</head>
+<body>
+<h1>小结</h1>
+<h>从两幅地图可以更加直观地看出，HIV新增感染人和艾滋病患者主要分布在非洲大陆，尤其是非洲的南部和东部</h>
+<h1>数据故事</h1>
+<h>1998年以来，全球新增HIV感染者减少了40%。1998年，新增感染者近300万；2018年，新增感染者降至170万，相当于每天有5000人感染。新增感染者总数中，约61%来自撒哈拉以南非洲地区。
+
+全球HIV携带者总数从1990年的790万稳步升至目前的3790万。不过，随着艾滋病抗病毒治疗覆盖率的提高，艾滋病死亡人数从2005年的170万降至2018年的77万。2018年，约2300万人获得了艾滋病治疗服务（占HIV携带者和艾滋病患者总数61%）。
+
+通过数据获得的图表中可以看出HIV新增感染人数的减少与经济发展、教育的普及和出生率有着密切的关联。在艾滋病方面，经济发展所带来的积极影响就是各国能够投入更多的人力物力财力去研发预防和治疗艾滋病的方法。而教育的普及也促使了人们健康意识的提高，特别是在生理卫生方面的知识，只有保护好自己，才是预防艾滋的最有效的方法。</h>
+    <div id="8e47cca6f27040ef86c204c6a5c49e98" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_8e47cca6f27040ef86c204c6a5c49e98 = echarts.init(
+            document.getElementById('8e47cca6f27040ef86c204c6a5c49e98'), 'white', {renderer: 'canvas'});
+        var option_8e47cca6f27040ef86c204c6a5c49e98 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "成人15岁新感染艾滋病毒",
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "world",
+            "data": [
+                {
+                    "name": "Afghanistan",
+                    "value": 770.0
+                },
+                {
+                    "name": "Angola",
+                    "value": 21000.0
+                },
+                {
+                    "name": "Argentina",
+                    "value": 6400.0
+                },
+                {
+                    "name": "Armenia",
+                    "value": 200.0
+                },
+                {
+                    "name": "Australia",
+                    "value": 1000.0
+                },
+                {
+                    "name": "Burundi",
+                    "value": 850.0
+                },
+                {
+                    "name": "Benin",
+                    "value": 3300.0
+                },
+                {
+                    "name": "Burkina Faso",
+                    "value": 1700.0
+                },
+                {
+                    "name": "Bangladesh",
+                    "value": 1500.0
+                },
+                {
+                    "name": "Bulgaria",
+                    "value": 500.0
+                },
+                {
+                    "name": "Bahamas, The",
+                    "value": 200.0
+                },
+                {
+                    "name": "Bosnia and Herzegovina",
+                    "value": 100.0
+                },
+                {
+                    "name": "Belarus",
+                    "value": 1900.0
+                },
+                {
+                    "name": "Belize",
+                    "value": 500.0
+                },
+                {
+                    "name": "Bolivia",
+                    "value": 1300.0
+                },
+                {
+                    "name": "Barbados",
+                    "value": 200.0
+                },
+                {
+                    "name": "Bhutan",
+                    "value": 100.0
+                },
+                {
+                    "name": "Botswana",
+                    "value": 8200.0
+                },
+                {
+                    "name": "Central African Republic",
+                    "value": 4400.0
+                },
+                {
+                    "name": "Chile",
+                    "value": 4900.0
+                },
+                {
+                    "name": "Cote d'Ivoire",
+                    "value": 14000.0
+                },
+                {
+                    "name": "Cameroon",
+                    "value": 19000.0
+                },
+                {
+                    "name": "Congo, Dem. Rep.",
+                    "value": 12000.0
+                },
+                {
+                    "name": "Congo, Rep.",
+                    "value": 4100.0
+                },
+                {
+                    "name": "Colombia",
+                    "value": 6400.0
+                },
+                {
+                    "name": "Comoros",
+                    "value": 100.0
+                },
+                {
+                    "name": "Cabo Verde",
+                    "value": 100.0
+                },
+                {
+                    "name": "Costa Rica",
+                    "value": 1000.0
+                },
+                {
+                    "name": "Cuba",
+                    "value": 1700.0
+                },
+                {
+                    "name": "Czech Republic",
+                    "value": 500.0
+                },
+                {
+                    "name": "Germany",
+                    "value": 2600.0
+                },
+                {
+                    "name": "Djibouti",
+                    "value": 500.0
+                },
+                {
+                    "name": "Denmark",
+                    "value": 200.0
+                },
+                {
+                    "name": "Dominican Republic",
+                    "value": 2600.0
+                },
+                {
+                    "name": "Algeria",
+                    "value": 1200.0
+                },
+                {
+                    "name": "Ecuador",
+                    "value": 2200.0
+                },
+                {
+                    "name": "Egypt, Arab Rep.",
+                    "value": 3500.0
+                },
+                {
+                    "name": "Eritrea",
+                    "value": 500.0
+                },
+                {
+                    "name": "Spain",
+                    "value": 3100.0
+                },
+                {
+                    "name": "Estonia",
+                    "value": 500.0
+                },
+                {
+                    "name": "Ethiopia",
+                    "value": 20000.0
+                },
+                {
+                    "name": "Finland",
+                    "value": 200.0
+                },
+                {
+                    "name": "France",
+                    "value": 6200.0
+                },
+                {
+                    "name": "Gabon",
+                    "value": 1600.0
+                },
+                {
+                    "name": "Georgia",
+                    "value": 710.0
+                },
+                {
+                    "name": "Ghana",
+                    "value": 17000.0
+                },
+                {
+                    "name": "Guinea",
+                    "value": 5300.0
+                },
+                {
+                    "name": "Gambia, The",
+                    "value": 1900.0
+                },
+                {
+                    "name": "Guinea-Bissau",
+                    "value": 1900.0
+                },
+                {
+                    "name": "Equatorial Guinea",
+                    "value": 4200.0
+                },
+                {
+                    "name": "Guatemala",
+                    "value": 2100.0
+                },
+                {
+                    "name": "Guyana",
+                    "value": 500.0
+                },
+                {
+                    "name": "Honduras",
+                    "value": 730.0
+                },
+                {
+                    "name": "Croatia",
+                    "value": 100.0
+                },
+                {
+                    "name": "Haiti",
+                    "value": 6500.0
+                },
+                {
+                    "name": "Hungary",
+                    "value": 500.0
+                },
+                {
+                    "name": "Indonesia",
+                    "value": 43000.0
+                },
+                {
+                    "name": "Ireland",
+                    "value": 500.0
+                },
+                {
+                    "name": "Iran, Islamic Rep.",
+                    "value": 4300.0
+                },
+                {
+                    "name": "Iceland",
+                    "value": 100.0
+                },
+                {
+                    "name": "Israel",
+                    "value": 500.0
+                },
+                {
+                    "name": "Italy",
+                    "value": 3100.0
+                },
+                {
+                    "name": "Jamaica",
+                    "value": 2400.0
+                },
+                {
+                    "name": "Jordan",
+                    "value": 100.0
+                },
+                {
+                    "name": "Japan",
+                    "value": 1200.0
+                },
+                {
+                    "name": "Kazakhstan",
+                    "value": 2600.0
+                },
+                {
+                    "name": "Kenya",
+                    "value": 38000.0
+                },
+                {
+                    "name": "Kyrgyz Republic",
+                    "value": 550.0
+                },
+                {
+                    "name": "Cambodia",
+                    "value": 780.0
+                },
+                {
+                    "name": "Kuwait",
+                    "value": 100.0
+                },
+                {
+                    "name": "Lao PDR",
+                    "value": 500.0
+                },
+                {
+                    "name": "Lebanon",
+                    "value": 200.0
+                },
+                {
+                    "name": "Liberia",
+                    "value": 1600.0
+                },
+                {
+                    "name": "Libya",
+                    "value": 500.0
+                },
+                {
+                    "name": "Sri Lanka",
+                    "value": 200.0
+                },
+                {
+                    "name": "Lesotho",
+                    "value": 12000.0
+                },
+                {
+                    "name": "Luxembourg",
+                    "value": 100.0
+                },
+                {
+                    "name": "Latvia",
+                    "value": 500.0
+                },
+                {
+                    "name": "Morocco",
+                    "value": 850.0
+                },
+                {
+                    "name": "Moldova",
+                    "value": 970.0
+                },
+                {
+                    "name": "Madagascar",
+                    "value": 5600.0
+                },
+                {
+                    "name": "Mexico",
+                    "value": 11000.0
+                },
+                {
+                    "name": "North Macedonia",
+                    "value": 100.0
+                },
+                {
+                    "name": "Mali",
+                    "value": 11000.0
+                },
+                {
+                    "name": "Myanmar",
+                    "value": 9800.0
+                },
+                {
+                    "name": "Montenegro",
+                    "value": 100.0
+                },
+                {
+                    "name": "Mongolia",
+                    "value": 100.0
+                },
+                {
+                    "name": "Mozambique",
+                    "value": 130000.0
+                },
+                {
+                    "name": "Mauritania",
+                    "value": 100.0
+                },
+                {
+                    "name": "Mauritius",
+                    "value": 900.0
+                },
+                {
+                    "name": "Malawi",
+                    "value": 35000.0
+                },
+                {
+                    "name": "Malaysia",
+                    "value": 5600.0
+                },
+                {
+                    "name": "Namibia",
+                    "value": 5700.0
+                },
+                {
+                    "name": "Niger",
+                    "value": 1300.0
+                },
+                {
+                    "name": "Nigeria",
+                    "value": 100000.0
+                },
+                {
+                    "name": "Nicaragua",
+                    "value": 500.0
+                },
+                {
+                    "name": "Netherlands",
+                    "value": null
+                },
+                {
+                    "name": "Norway",
+                    "value": 200.0
+                },
+                {
+                    "name": "Nepal",
+                    "value": 810.0
+                },
+                {
+                    "name": "New Zealand",
+                    "value": 200.0
+                },
+                {
+                    "name": "Oman",
+                    "value": 500.0
+                },
+                {
+                    "name": "Pakistan",
+                    "value": 20000.0
+                },
+                {
+                    "name": "Panama",
+                    "value": 1300.0
+                },
+                {
+                    "name": "Peru",
+                    "value": 3200.0
+                },
+                {
+                    "name": "Philippines",
+                    "value": 13000.0
+                },
+                {
+                    "name": "Papua New Guinea",
+                    "value": 1900.0
+                },
+                {
+                    "name": "Portugal",
+                    "value": 740.0
+                },
+                {
+                    "name": "Paraguay",
+                    "value": 1100.0
+                },
+                {
+                    "name": "Romania",
+                    "value": 790.0
+                },
+                {
+                    "name": "Rwanda",
+                    "value": 3200.0
+                },
+                {
+                    "name": "Sudan",
+                    "value": 4400.0
+                },
+                {
+                    "name": "Senegal",
+                    "value": 880.0
+                },
+                {
+                    "name": "Singapore",
+                    "value": 200.0
+                },
+                {
+                    "name": "Sierra Leone",
+                    "value": 3400.0
+                },
+                {
+                    "name": "El Salvador",
+                    "value": 640.0
+                },
+                {
+                    "name": "Somalia",
+                    "value": 500.0
+                },
+                {
+                    "name": "Serbia",
+                    "value": 500.0
+                },
+                {
+                    "name": "South Sudan",
+                    "value": 17000.0
+                },
+                {
+                    "name": "Suriname",
+                    "value": 500.0
+                },
+                {
+                    "name": "Slovak Republic",
+                    "value": 200.0
+                },
+                {
+                    "name": "Slovenia",
+                    "value": 100.0
+                },
+                {
+                    "name": "Eswatini",
+                    "value": 6900.0
+                },
+                {
+                    "name": "Syrian Arab Republic",
+                    "value": 100.0
+                },
+                {
+                    "name": "Chad",
+                    "value": 4400.0
+                },
+                {
+                    "name": "Togo",
+                    "value": 3700.0
+                },
+                {
+                    "name": "Thailand",
+                    "value": 6300.0
+                },
+                {
+                    "name": "Tajikistan",
+                    "value": 790.0
+                },
+                {
+                    "name": "Tunisia",
+                    "value": 500.0
+                },
+                {
+                    "name": "Tanzania",
+                    "value": 64000.0
+                },
+                {
+                    "name": "Uganda",
+                    "value": 45000.0
+                },
+                {
+                    "name": "Ukraine",
+                    "value": 12000.0
+                },
+                {
+                    "name": "Uruguay",
+                    "value": 880.0
+                },
+                {
+                    "name": "Uzbekistan",
+                    "value": 4400.0
+                },
+                {
+                    "name": "Vietnam",
+                    "value": 5400.0
+                },
+                {
+                    "name": "World",
+                    "value": 1600000.0
+                },
+                {
+                    "name": "Yemen, Rep.",
+                    "value": 1000.0
+                },
+                {
+                    "name": "South Africa",
+                    "value": 220000.0
+                },
+                {
+                    "name": "Zambia",
+                    "value": 43000.0
+                },
+                {
+                    "name": "Zimbabwe",
+                    "value": 33000.0
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "showLegendSymbol": true,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Adults_ages_15_newly_infected_with_HIV"
+            ],
+            "selected": {
+                "Adults_ages_15_newly_infected_with_HIV": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "Adults_ages_15_newly_infected_with_HIV"
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 100,
+        "max": 140000,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140
+    }
+};
+        chart_8e47cca6f27040ef86c204c6a5c49e98.setOption(option_8e47cca6f27040ef86c204c6a5c49e98);
+    </script>
+</body>
+</html>

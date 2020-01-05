@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <!--导航栏-->
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">首页</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/chart">图表1</a></li>
+            <li class="active"><a href="/show_pyecharts">图表2</a></li>
+            <li class="active"><a href="/map">地图1</a></li>
+            <li class="active"><a href="/map2">地图2</a></li>
+        </ul>
+    </div>
+	</div>
+</nav>
+    <!--页面链接-->
+<!--表格列表-->
+    <div class="col-md-4" style="float: left">
+    <h2>表格</h2>
+    <div style="background-color: #a6e1ec ;margin: 30px;height:30px;border-radius: 10px;box-shadow: #9d9d9d">
+        <a href="/result1"><p style="text-align: center">出生率表格</p></a></div>
+    <div style="background-color: #a6e1ec;margin: 30px;height:30px;border-radius: 10px;box-shadow: #9d9d9d">
+        <a href="/gdp"><p style="text-align: center">人均GDP</p></a></div>
+    <div style="background-color: #a6e1ec;margin: 30px;height:30px;border-radius: 10px;box-shadow: #9d9d9d">
+        <a href="/index2"><p style="text-align: center">受教育情况</p></a></div>
+    <div style="background-color: #a6e1ec;margin: 30px;height:30px;border-radius: 10px;box-shadow: #9d9d9d">
+        <a href="/index"><p style="text-align: center">0-14新增感染HIV人数</p></a></div>
+    </div>
+<!--图表列表-->
+<div style="float: left">
+<h2>图表</h2>
+    <div class="img col-md-2" style="background-color: aliceblue;margin: 10px;height: auto;width: auto;float: left;text-align: center;">
+        <a href="/chart">
+            <img style="margin: 10px;" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4212326400,2501671592&fm=11&gp=0.jpg"  height="200px">
+        </a>
+        <div class="desc">点击进入：新感染情况</div>
+    </div>
+
+    <div class="img col-md-2" style="background-color: aliceblue;margin: 10px;height: auto;width: auto;float: left;text-align: center;">
+        <a href="/show_pyecharts">
+            <img style="margin: 10px;" src="https://img.zcool.cn/community/0126ee5de8ad5ca80120956810c05a.png@1280w_1l_2o_100sh.png"  height="200px">
+        </a>
+        <div class="desc">点击进入：GDP、教育率</div>
+    </div>
+</div>
+<!--地图列表-->
+<div style="float: left ;margin:10px;">
+    <h2>地图</h2>
+    <div style="float: left;background-color: aliceblue;text-align: center">
+
+    <a href="/map" style="background-color: aliceblue">
+            <img style="margin: 10px;" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2682748575,1071232459&fm=26&gp=0.jpg"  height="100px">
+        </a>
+        <div class="desc">Children_0_14_living_with_HIV_2018</div>
+    <a href="/map2" style="background-color: aliceblue">
+            <img style="margin: 10px;" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2682748575,1071232459&fm=26&gp=0.jpg"  height="100px">
+        </a>
+        <div class="desc">Adults_ages_15_newly_infected_with_HIV_2018</div>
+    </div>
+</div>
+    <!--表格-->
+<form method="POST" action="/tochart">
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='Do it!' type='SUBMIT'></p>
+</form>
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+{% endblock %}
