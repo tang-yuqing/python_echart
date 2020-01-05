@@ -2,7 +2,7 @@
 
 ### 项目展示
 - [Pythonanywhere链接](http://18101303036.pythonanywhere.com/)
-- [github仓库]()
+- [github仓库](https://github.com/tang-yuqing/python_echart/)
 
 ### 研究目的
 - 分析艾滋病新增感染人数的变化趋势，可帮助人们作出判断，以便采取适当行动预防情况的发生
